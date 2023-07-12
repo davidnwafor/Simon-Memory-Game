@@ -1,0 +1,104 @@
+body {
+    background: rgb(39,22,60); /* background */
+    background: linear-gradient(90deg, rgba(39,22,60,1) 0%, rgba(255,255,255,1) 50%, rgba(39,22,60,1) 100%);
+}
+
+h1 {
+    font-family: Orbitron; /* changes font of heading */
+}
+
+.black-circle {
+    position: fixed;
+    height: 350px;
+    width: 350px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%; /*centre vertically */
+    left: 50%; /* centre horziontally */
+    margin-left: -175px; /*half the circle width */
+    margin-top: -175px; /*half the circle height */
+    z-index: 1;
+}
+
+.circle { /* class for coloured circles */
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: -100px; /*half the circle width */
+    margin-top: -100px; /*half the circle height */
+    z-index: 2;
+    box-shadow: 1px 1px 0px 10px black; /* outline */
+}
+
+.green-circle {
+    background-color: limegreen;
+    top: 30%; /* vertical placement */
+    left: 38%; /* horziontal placement */
+}
+
+.red-circle {
+    background-color: red;
+    top: 30%; /* vertical placement */
+    left: 62%; /* horziontal placement */
+}
+
+.yellow-circle {
+    background-color: gold;
+    top: 70%; /* vertical placement */
+    left: 38%; /* horziontal placement */
+}
+
+.blue-circle {
+    background-color: dodgerblue;
+    top: 70%; /* vertical placement */
+    left: 62%; /* horziontal placement */
+}
+
+.mini-circle {
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    top: 56%; /* vertical placement */
+    left: 50%; /* horziontal placement */
+    margin-left: -5px; /*half the circle width */
+    margin-top: -5px; /*half the circle height */
+    z-index: 3;
+}
+
+.button { /* class for three grey buttons */
+    position: fixed;
+    text-align: center;
+    z-index: 3;
+    font-family: Orbitron;
+    background-color: darkgrey;
+    color: rgb(63, 63, 63);
+    font-size: 28px;
+    border-radius: 10px; /* adds curves to the buttons */
+}
+
+.start { /* middle button */
+    left: 45.6%;
+    top: 47.5%;
+    cursor: pointer;
+}
+
+.highest-score { /* left button */
+    left: 41.2%;
+    top: 47.5%;
+    width: 62px;
+    height: 42px;
+}
+
+.current-score { /* right button */
+    left: 54.5%;
+    top: 47.5%;
+    width: 62px;
+    height: 42px;
+}
+
+.active { /* used for flashing */
+    background-color: white;
+}

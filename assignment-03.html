@@ -1,0 +1,129 @@
+<html>
+    <link rel="stylesheet" href="assignment-03.css"> <!--link to css file -->
+    <head>
+        <title>CS230 Lab 3, Student No: 21353491</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!-- link to jquery -->
+    </head>
+    <body>
+        <h1 style="text-align:center;">Student Grades Table</h1>
+
+        <table id="myTable" style="width:100%">
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Assignment 1</th>
+                <th>Assignment 2</th>
+                <th>Assignment 3</th>
+                <th>Assignment 4</th>
+                <th>Assignment 5</th>
+                <th onclick="toggle()">Average (%)</th>
+            </tr>
+            <tr>
+                <td>James Harden</td>
+                <td>001</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(1)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(1)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(1)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(1)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(1)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Chris Paul</td>
+                <td>002</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(2)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(2)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(2)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(2)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(2)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Kyrie Irving</td>
+                <td>003</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(3)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(3)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(3)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(3)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(3)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Derrick Rose</td>
+                <td>004</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(4)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(4)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(4)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(4)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(4)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Damian Lilard</td>
+                <td>005</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(5)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(5)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(5)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(5)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(5)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Steph Curry</td>
+                <td>006</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(6)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(6)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(6)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(6)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(6)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Russell Westbrook</td>
+                <td>007</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(7)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(7)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(7)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(7)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(7)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Lebron James</td>
+                <td>008</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(8)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(8)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(8)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(8)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(8)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Ja Morant</td>
+                <td>009</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(9)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(9)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(9)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(9)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(9)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+            <tr>
+                <td>Kevin Durant</td>
+                <td>010</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(10)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(10)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(10)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(10)">-</td>
+                <td class="cAlign" contenteditable="true" oninput="calculateAverage(10)">-</td>
+                <td class="rAlign">0</td>
+            </tr>
+        </table>
+        <p id="unsub">Un-Submitted Assignments: 50</p>
+        <button class="button button1" onclick="addNewRow()">Add New Row</button>
+        <button class="button button2" onclick="addNewColumn()">Add New Column</button>
+        <button class="button button3" onclick="saveTable()">Save Table</button>
+        <button class="button button4" onclick="retrieveTable()">Retrieve Table</button>
+    </body>
+    <script src="assignment-03.js"></script> <!--link to js file -->
+</html>
